@@ -53,9 +53,9 @@ def main():
 
         print(f'Случайное вещественное число {result}')
     elif random_type == '3':
-        alphabet = ascii_letters[:25]
         borders = input('Введите границы для поиска буквы алфавита ').split(' ')
         (left_border, right_border) = (min(borders), max(borders))
+        alphabet = ascii_letters[:26]
         left_border_int = alphabet.index(left_border)
         right_border_int = alphabet.index(right_border)
         rand_idx = randint(left_border_int, right_border_int)
