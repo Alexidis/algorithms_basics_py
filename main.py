@@ -3,7 +3,7 @@ import pkgutil
 
 if __name__ == '__main__':
     (lesson_num, task_num) = input('Введите номер урока и номер задания через пробел ').split(' ')
-    lesson_name = f'l{lesson_num}'
+    lesson_name = f'lesson{lesson_num}'
     task_name = f'task{task_num}'
     task_nums_list = []
     try:
@@ -17,5 +17,4 @@ if __name__ == '__main__':
                                       f' Список номер заданий в уроке {task_nums_list}')
         else:
             raise NotImplementedError(f'Урока с номером {lesson_num} не существует')
-    task()
-описание
+    task.main()

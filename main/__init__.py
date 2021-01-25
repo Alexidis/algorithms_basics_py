@@ -1,1 +1,1 @@
-from .lesson1 import task1 as l1_task1
+from . import lesson1
