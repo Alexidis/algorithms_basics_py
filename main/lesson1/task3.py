@@ -16,8 +16,11 @@ def main():
                         '3 - буквы\n')
     if random_type == '1':
         borders = input('Введите границы для поиска случайного целого числа ').split(' ')
-        (left_border, right_border) = (int(min(borders)), int(max(borders)))
-        result = randint(left_border, right_border)
+        left_border = int(borders[0])
+        right_border = int(borders[1])
+        int_left_borders = min(left_border, right_border)
+        int_right_borders =  max(left_border, right_border)
+        result = randint(int_left_borders, int_right_borders)
         print(f'Случайное целое число {result}')
 
     elif random_type == '2':
