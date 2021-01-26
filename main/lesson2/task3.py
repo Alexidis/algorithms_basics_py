@@ -7,6 +7,7 @@ def main():
     revers_str = ''
 
     while asc_str != 0:
+        # чтобы в начале числа не шли нули, проверяем что уже есть хоть одно число или претендент не 0
         if revers_str or asc_str % 10:
             revers_str += str(asc_str % 10)
         asc_str //= 10

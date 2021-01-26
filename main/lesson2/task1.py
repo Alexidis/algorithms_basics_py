@@ -19,7 +19,6 @@ def main():
         else:
             a = float(a_str)
             b = float(b_str)
-            result = 0
             if sign == '+':
                 result = a + b
             elif sign == '-':

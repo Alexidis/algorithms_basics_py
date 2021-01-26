@@ -6,7 +6,6 @@ def main():
     odd_count = 0
     even_count = 0
     while natural_num != 0:
-
         if natural_num % 2:
             odd_count += 1
         else:
