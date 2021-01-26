@@ -8,17 +8,14 @@ from random import randint
 
 def main():
     secret = randint(0, 100)
-    win = False
     for attempt in range(0, 10):
         guess = int(input('Введите свое число '))
         if guess == secret:
-            win = True
+            print('Вы угадали')
             break
         elif secret < guess:
             print('Загаданное число меньше')
         else:
             print('Загаданное число больше')
-    if win:
-        print('Вы угадали')
     else:
         print(f'Было загадано число {secret}')
