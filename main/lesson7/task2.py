@@ -35,6 +35,6 @@ def merge_sort(array):
 
 def main():
     size = 10
-    unsorted_array = [random.randint(0, 49) for i in range(size)]
+    unsorted_array = [random.uniform(0, 49) for i in range(size)]
     print(unsorted_array)
     print(merge_sort(unsorted_array))
