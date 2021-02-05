@@ -9,7 +9,8 @@ import random
 
 def median(array):
     # будущая медиана
-    med = 0
+    med = array[0]
+    counter = len(array)
     # каждый элемент списка
     for el in array:
         # сравниваем с каждым
@@ -22,21 +23,21 @@ def median(array):
             if el < el2:
                 move -= 1
         # медиана будет всегда по центру то есть без движения
-        if not move:
+        if counter > abs(move):
+            counter = abs(move)
             med = el
+        if not move:
+            break
     return med
 
 
 def main():
     size = 11
     unsorted_array = [random.randint(0, 99) for i in range(size)]
+
     print(unsorted_array)
     m = median(unsorted_array)
-    # при условии конечно что медиану вообще возможно найти
-    if m:
-        print(m)
-    else:
-        print('В данном списке нет медианы')
+    print(m)
 
     # это чтоб глаза не ломатть
     unsorted_array.sort()
