@@ -3,12 +3,14 @@
 # Примечания:
 # a. граф должен храниться в виде списка смежности;
 # b. генерация графа выполняется в отдельной функции, которая принимает на вход число вершин.
+import random
 
 
-def generate_graph(vertex_count):
-    graph = {}
-    for vertex in range(vertex_count):
-        graph[vertex] = {v for v in range(vertex_count) if v != vertex}
+def generate_graph(num_nodes):
+    nodes = [i for i in range(num_nodes)]
+    graph = dict.fromkeys(nodes)
+    for key in graph:
+        graph[key] = set(random.sample(nodes,random.randint(1, num_nodes)))
     return graph
 
 
@@ -26,10 +28,11 @@ def dfs(graph, start, visited=None):
 
 
 def main():
-    SIZE = 5
+    SIZE = int(input('Введите количество вершин '))
     graph = generate_graph(SIZE)
     for key, val in graph.items():
         print(key, val)
-    print(dfs(graph, 0))
+    start = int(input('С какой начать обход '))
+    print(f'результат обхода от вержины {start}     {dfs(graph, start)}')
 
 
