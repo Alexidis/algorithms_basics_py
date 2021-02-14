@@ -13,7 +13,7 @@ def hash_subsr_counter(s: str) -> int:
         for j in range(i + 1,  len(s) + 1):
             set_hash.add(hash(s[i:j]))
 
-    counter = len(set_hash)
+    counter = len(set_hash) - 1
     return counter
 
 
